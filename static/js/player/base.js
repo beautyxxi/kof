@@ -131,6 +131,7 @@ export class Player extends AcGameObject {
 
     update_direction() {  //人物对称
         if (this.status === 6) return;  //死亡状态不再改变方向
+        
         let players = this.root.players;   //将玩家取出
         if (players[0] && players[1]) {
             let me = this, you = players[1 - this.id];
